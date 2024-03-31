@@ -91,18 +91,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1em 0;
-  margin-bottom: 3.125rem;
 }
 
 #icon {
   width: 100px;
   height: 100px;
-}
-
-icon-buton {
-  width: fit-content;
-  height: fit-content;
-  background-color: transparent;
+  transition: transform 0.2s ease; /* Added transition property */
 }
 
 .name {
@@ -113,19 +107,6 @@ icon-buton {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
 }
 
 .bubble {
