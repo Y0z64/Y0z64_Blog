@@ -4,22 +4,28 @@ import gsap from "gsap";
 
 // HTML structure
 const appDiv = document.getElementById("app");
+const nameWrapper = document.getElementById("hero-name");
 const content = document.createElement("div");
-const name = document.createElement("h1");
+const username = document.createElement("h1");
+const name = document.createElement("h3");
 
 const icon = document.querySelector("#icon");
-const bubble = document.querySelector("#bubble"); // Select the bubble
+const bubble = document.querySelector("#bubble");
+
 
 // Content
-name.innerText = "Y0z64";
+username.innerText = "Y0z64";
+name.innerText = "Yair Salvador"
 
 // Connections
 appDiv?.appendChild(content);
-content.appendChild(name);
+nameWrapper?.appendChild(username);
+nameWrapper?.appendChild(name);
+
+username.classList.add("username");
+username.classList.add("open-sans-bold");
 
 name.classList.add("name");
-name.classList.add("open-sans-bold");
-
 
 document.addEventListener("mousemove", function (e) {
   if (icon === null) return;
