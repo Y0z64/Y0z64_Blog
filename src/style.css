@@ -109,7 +109,7 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
-.bubble {
+#bubble {
   position: fixed;
   display: flex;
   align-items: center;
@@ -127,7 +127,9 @@ header {
   transform-origin: center center;
   z-index: 1000;
   font-size: 20px;
+  visibility: hidden;
 }
+
 .bubble-icon {
   padding-left: 10px;
   width: 30px;
