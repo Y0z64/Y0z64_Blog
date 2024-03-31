@@ -48,7 +48,7 @@ document.addEventListener("mousemove", function (e) {
 
   if (distance < 100) {
     gsap.to(icon, {
-      duration: 0.2,
+      duration: 0.05,
       y: dy / 5, // Increase the amount of movement
       x: dx / 5, // Increase the amount of movement
       scale: 1.2,
@@ -60,7 +60,7 @@ document.addEventListener("mousemove", function (e) {
 // Reset the icon when the mouse leaves
 icon?.addEventListener("mouseleave", () => {
   gsap.to(icon, {
-    duration: 0.6,
+    duration: 0,
     y: 0,
     x: 0,
     scale: 1,

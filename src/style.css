@@ -96,7 +96,7 @@ header {
 #icon {
   width: 100px;
   height: 100px;
-  transition: transform 0.2s ease; /* Added transition property */
+  transition: transform 0.3s ease; /* Added transition property */
 }
 
 .name {
@@ -127,6 +127,10 @@ header {
   transform-origin: center center;
   z-index: 1000;
   font-size: 20px;
+}
+.bubble-icon {
+  width: 30px;
+  height: 30px;
 }
 
 @media (prefers-color-scheme: light) {
