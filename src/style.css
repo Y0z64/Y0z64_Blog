@@ -5,12 +5,15 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #0A0908;
+  background-color: #0a0908;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --red: #FC466B;
+  --purple: #3F5EFB;
 }
 
 .container {
@@ -21,7 +24,7 @@
   position: relative;
 }
 
-.fuzzy-wrapper{
+.fuzzy-wrapper {
   background-image: url("white-noise.jpg");
   position: absolute;
   inset: -200%;
@@ -105,7 +108,7 @@ icon-buton {
 .name {
   font-size: 4rem;
   letter-spacing: 2px;
-  color: #7DA3B5;
+  color: #7da3b5;
 }
 
 .logo {
@@ -123,19 +126,22 @@ icon-buton {
 
 .bubble {
   position: fixed;
-  background-color: #C6AC8F;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(to right, red, purple); /* Add this line */
   width: fit-content;
+  padding: 5px 10px 4px 10px;
   text-align: left;
-  padding: 5px 10px 4px 0.625rem;
-  text-align: center;
-  color: #EAE0D5;
+  color: #eae0d5;
   pointer-events: none;
   margin-left: 20px;
   margin-top: 20px;
-  border-radius: 50%;
+  border-radius: 25px 25px 25px 5px;
   transition: transform 0.2s ease;
   transform-origin: center center;
   z-index: 1000;
+  font-size: 20px;
 }
 
 @media (prefers-color-scheme: light) {
