@@ -12,11 +12,14 @@ const bubble = document.querySelector("#bubble"); // Select the bubble
 
 // Content
 name.innerText = "Y0z64";
-name.classList.add("name");
 
-// Append
+// Connections
 appDiv?.appendChild(content);
 content.appendChild(name);
+
+name.classList.add("name");
+name.classList.add("open-sans-bold");
+
 
 document.addEventListener("mousemove", function (e) {
   if (icon === null) return;
@@ -32,8 +35,8 @@ document.addEventListener("mousemove", function (e) {
   if (distance < 100) {
     gsap.to(icon, {
       duration: 0.1,
-      y: dy / 5, // Increase the amount of movement
-      x: dx / 5, // Increase the amount of movement
+      y: dy / 6, // Increase the amount of movement
+      x: dx / 6, // Increase the amount of movement
       scale: 1.2,
       ease: "power2.out",
     });
