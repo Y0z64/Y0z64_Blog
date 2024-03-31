@@ -31,46 +31,34 @@ document.addEventListener("mousemove", function (e) {
 
   if (distance < 100) {
     gsap.to(icon, {
-      duration: 0.05,
+      duration: 0.1,
       y: dy / 5, // Increase the amount of movement
       x: dx / 5, // Increase the amount of movement
       scale: 1.2,
       ease: "power2.out",
     });
 
-    // Move the bubble
+    // Show the bubble instantly
     if (bubble !== null) {
       (bubble as HTMLElement).style.visibility = "visible";
-      gsap.to(bubble, {
-        duration: 0.05,
-        x: e.pageX + 20, // Position the bubble to the right of the mouse
-        y: e.pageY - (bubble as HTMLElement).offsetHeight - 20, // Position the bubble above the mouse
-        ease: "power2.out",
-      });
+      (bubble as HTMLElement).style.opacity = "1"; // Show instantly
+      (bubble as HTMLElement).style.left = e.pageX + "px"; // Position the bubble relative to the mouse
+      (bubble as HTMLElement).style.top =
+        e.pageY - (bubble as HTMLElement).offsetHeight - 20 + "px"; // Position the bubble above the mouse
     }
   }
 });
 
-// Reset the icon and bubble when the mouse leaves
+// Fade out the bubble when the mouse leaves
 icon?.addEventListener("mouseleave", () => {
-  gsap.to(icon, {
-    duration: 0,
-    y: 0,
-    x: 0,
-    scale: 1,
-    ease: "power2.out",
-  });
-
-  // Reset the bubble
   if (bubble !== null) {
-    (bubble as HTMLElement).style.visibility = "hidden";
     gsap.to(bubble, {
-      duration: 0,
-      x: 0,
-      y: 0,
+      duration: 0.2,
+      opacity: 0, // Fade out
       ease: "power2.out",
     });
   }
 });
+
 
 setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
