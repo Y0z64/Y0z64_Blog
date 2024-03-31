@@ -106,9 +106,13 @@ icon-buton {
 }
 
 .name {
-  font-size: 4rem;
-  letter-spacing: 2px;
-  color: #7da3b5;
+  width: fit-content;
+  font-size: 70px;
+  letter-spacing: 3px;
+  background: linear-gradient(to right, red , purple 70%); /* Adjusted gradient to start more on the left */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .logo {
