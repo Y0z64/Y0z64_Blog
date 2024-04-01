@@ -90,6 +90,18 @@ h2 {
   text-align: left;
 }
 
+#content {
+  width: 100%;
+  height: fit-content;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
 header {
   width: 100%;
   height: fit-content;

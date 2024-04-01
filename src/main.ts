@@ -2,6 +2,12 @@ import "./style.css";
 import { setupCounter } from "./counter.ts";
 import gsap from "gsap";
 
+const articles = [
+  { title: "Article 1", description: "This is article 1" },
+  { title: "Article 2", description: "This is article 2" },
+  // Add more articles here...
+];
+
 // HTML structure
 const appDiv = document.getElementById("app");
 const nameWrapper = document.getElementById("hero-name");
@@ -22,11 +28,18 @@ appDiv?.appendChild(content);
 nameWrapper?.appendChild(username);
 nameWrapper?.appendChild(name);
 
+content.id = "content";
+
 username.classList.add("username");
 username.classList.add("open-sans-bold");
 
 name.classList.add("name");
 name.classList.add("fira-code-regular");
+
+articles.forEach((article) => {
+  const card = createCard(article);
+  content.appendChild(card);
+});
 
 document.addEventListener("mousemove", function (e) {
   if (icon === null) return;
