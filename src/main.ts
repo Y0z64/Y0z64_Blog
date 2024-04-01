@@ -15,7 +15,7 @@ const bubble = document.querySelector("#bubble");
 
 // Content
 username.innerText = "Y0z64";
-name.innerText = "Yair Salvador"
+name.innerText = "//Yair Salvador"
 
 // Connections
 appDiv?.appendChild(content);
@@ -26,6 +26,7 @@ username.classList.add("username");
 username.classList.add("open-sans-bold");
 
 name.classList.add("name");
+name.classList.add("fira-code-regular");
 
 document.addEventListener("mousemove", function (e) {
   if (icon === null) return;
