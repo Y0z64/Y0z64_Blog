@@ -191,15 +191,16 @@ header {
 }
 
 .card {
+  position: relative;
   box-sizing: border-box; /* Add this line */
   width: 100%;
   min-height: 6.25rem;
   display: flex;
   justify-content: start;
   align-items: center;
-  padding: 10px 27.5px 10px 27.5px;
+  padding: 10px 27.5px;
   display: flex;
-  border-radius: 1.1rem;
+  border-radius: 17.6px;
   background-color: #121921;
   border: 2px solid #2b3138;
   transition: all 0.17s ease-in-out;
@@ -215,6 +216,19 @@ header {
   justify-content: space-between;
   align-items: start;
   text-align: left;
+}
+
+.tag {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: fit-content;
+  min-height: 26.5px;
+  padding: 4px 8px;
+  color: white;
+  background: linear-gradient(to right, red, purple 70%);
+  text-align: center;
+  border-radius: 0.4375rem 0.4375rem 0.4375rem 1.1rem;
 }
 
 /* Fonts */

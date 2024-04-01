@@ -1,6 +1,7 @@
 type Card = {
   title: string;
   description: string;
+  tag?: string;
   image?: string;
 };
 
@@ -11,7 +12,16 @@ export function createCard(article: Card) {
   const card = document.createElement("div");
   const title = document.createElement("h3");
   const description = document.createElement("p");
+  let tag = document.createElement("span");
   let image = document.createElement("img");
+
+  if (article.tag) {
+    tag = document.createElement("span");
+    tag.classList.add("tag");
+    tag.textContent = article.tag;
+    card.appendChild(tag);
+    card.style.paddingBottom = "26.5px"
+  }
 
   // Add an image if it exists
   if (article.image) {
@@ -19,6 +29,7 @@ export function createCard(article: Card) {
     image.src = article.image;
     card.appendChild(image);
   }
+
 
   // Add classes
   card.classList.add("card");
