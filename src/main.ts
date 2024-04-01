@@ -1,6 +1,6 @@
 import "./style.css";
-import { setupCounter } from "./counter.ts";
 import gsap from "gsap";
+import { createCard } from "./components/article";
 
 const articles = [
   { title: "Article 1", description: "This is article 1" },
@@ -21,7 +21,7 @@ const bubble = document.querySelector("#bubble");
 
 // Content
 username.innerText = "Y0z64";
-name.innerText = "//Yair Salvador"
+name.innerText = "//Yair Salvador";
 
 // Connections
 appDiv?.appendChild(content);
@@ -29,6 +29,7 @@ nameWrapper?.appendChild(username);
 nameWrapper?.appendChild(name);
 
 content.id = "content";
+
 
 username.classList.add("username");
 username.classList.add("open-sans-bold");
@@ -82,6 +83,3 @@ icon?.addEventListener("mouseleave", () => {
     });
   }
 });
-
-
-setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
