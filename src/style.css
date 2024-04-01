@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #0a0908;
+  background-color: #0d1117;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,9 +28,9 @@
 .fuzzy-wrapper {
   background-image: url("white-noise.jpg");
   position: absolute;
-  inset: -200%;
-  opacity: 4%;
-  animation: fuzziness 0.9s linear infinite both;
+  inset: -1000%;
+  opacity: 7.9%;
+  animation: fuzziness 1.6s linear infinite both;
   z-index: -1;
 }
 
@@ -84,7 +84,7 @@ h2 {
 
 #app {
   max-width: 700px;
-  margin: 3.75rem auto;
+  margin: 5rem auto;
   padding: 2rem;
   text-align: left;
 }
@@ -156,7 +156,7 @@ header {
   font-size: 20px;
   visibility: hidden;
   transition: transform 0.2s ease, opacity 0.2s ease; /* Add opacity to the transition */
-  opacity: 0; /* Add this line */
+  opacity: 0;
 }
 
 .bubble-icon {
@@ -185,8 +185,8 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  justify-content: center;
-  align-items: start;
+  justify-content: start;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
@@ -195,18 +195,29 @@ header {
   width: 100%;
   min-height: 6.25rem;
   display: flex;
-  justify-content: center;
-  align-items: start;
-  padding: 10px 30px 20px 30px;
-  background-color: black;
-  color: white;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 27.5px 10px 27.5px;
+  display: flex;
+  border-radius: 1.1rem;
+  background-color: #121921;
+  border: 2px solid #2b3138;
+  transition: all 0.17s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.009);
+}
+
+.text {
   display: flex;
   flex-direction: column;
-  border-radius: 1.1rem;
+  justify-content: space-between;
+  align-items: start;
+  text-align: left;
 }
 
 /* Fonts */
-
 .roboto-thin {
   font-family: "Roboto", sans-serif;
   font-weight: 100;

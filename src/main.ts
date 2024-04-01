@@ -1,6 +1,6 @@
 import "./style.css";
 import gsap from "gsap";
-import { createCard } from "./components/article";
+import createArticles from "./components/article";
 
 const articles = [
   { title: "Article 1", description: "This is article 1" },
@@ -11,9 +11,9 @@ const articles = [
 // HTML structure
 const appDiv = document.getElementById("app");
 const nameWrapper = document.getElementById("hero-name");
-const content = document.createElement("div");
 const username = document.createElement("h1");
 const name = document.createElement("h3");
+const content = createArticles(articles);
 
 const icon = document.querySelector("#icon");
 const bubble = document.querySelector("#bubble");
@@ -28,8 +28,6 @@ appDiv?.appendChild(content);
 nameWrapper?.appendChild(username);
 nameWrapper?.appendChild(name);
 
-content.id = "content";
-
 
 username.classList.add("username");
 username.classList.add("open-sans-bold");
@@ -37,10 +35,6 @@ username.classList.add("open-sans-bold");
 name.classList.add("name");
 name.classList.add("fira-code-regular");
 
-articles.forEach((article) => {
-  const card = createCard(article);
-  content.appendChild(card);
-});
 
 document.addEventListener("mousemove", function (e) {
   if (icon === null) return;
