@@ -3,8 +3,8 @@ import gsap from "gsap";
 import createArticles from "./components/article";
 
 const articles = [
-  { title: "Article 1", description: "This is article 1" },
-  { title: "Article 2", description: "This is article 2" },
+  { title: "Nulla eu in quis reprehenderit laborum veniam quis duis cupidatat veniam. Occaecat enim laboris in duis cupidatat ad. Commodo consequat et Lorem pariatur do non sint consectetur laboris irure irure aute.", description: "Id velit laboris commodo adipisicing nisi. Cillum sint veniam minim laborum tempor nisi adipisicing deserunt. Sint elit in eiusmod culpa eu aliqua labore qui non. Occaecat mollit pariatur aute elit nisi sunt dolor qui consectetur cillum Lorem quis eu. Magna in enim duis id commodo. Ut proident nostrud cupidatat ex adipisicing veniam in ut consequat dolor. Nisi ipsum cillum anim enim sint anim sunt est magna do amet non sit." },
+  { title: "Article 2", description: "Incididunt eu esse id velit incididunt sunt eiusmod tempor dolor veniam. Ad aliqua Lorem eiusmod sint mollit sit nulla amet ea eiusmod. Deserunt dolor mollit consequat non ipsum voluptate cillum ipsum dolore amet do sunt." },
   // Add more articles here...
 ];
 
