@@ -29,7 +29,7 @@
   background-image: url("white-noise.jpg");
   position: absolute;
   inset: -1000%;
-  opacity: 7.9%;
+  opacity: 3.5%;
   animation: fuzziness 1.6s linear infinite both;
   z-index: -1;
 }
