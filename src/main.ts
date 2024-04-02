@@ -2,6 +2,12 @@ import "./style.css";
 import gsap from "gsap";
 import createArticles from "./components/articles";
 
+let domReady = (cb) => {
+  document.readyState === "interactive" || document.readyState === "complete"
+    ? cb()
+    : document.addEventListener("DOMContentLoaded", cb);
+};
+
 const articles = [
   { path: "#something", image: "white-noise.jpg", date: "20/20/20", title: "Nulla eu in quis reprehenderit laborum veniam quis duis cupidatat veniam. Occaecat enim laboris in duis cupidatat ad. Commodo consequat et Lorem pariatur do non sint consectetur laboris irure irure aute.", description: "Id velit laboris commodo adipisicing nisi. Cillum sint veniam minim laborum tempor nisi adipisicing deserunt. Sint elit in eiusmod culpa eu aliqua labore qui non. Occaecat mollit pariatur aute elit nisi sunt dolor qui consectetur cillum Lorem quis eu. Magna in enim duis id commodo. Ut proident nostrud cupidatat ex adipisicing veniam in ut consequat dolor. Nisi ipsum cillum anim enim sint anim sunt est magna do amet non sit." },
   { path: "#something_else", image: "icon.png", title: "Article 2", description: "Incididunt eu esse id velit incididunt sunt eiusmod tempor dolor veniam. Ad aliqua Lorem eiusmod sint mollit sit nulla amet ea eiusmod. Deserunt dolor mollit consequat non ipsum voluptate cillum ipsum dolore amet do sunt.", tag: "Javascript" },
@@ -74,4 +80,9 @@ icon?.addEventListener("mouseleave", () => {
       ease: "power2.out",
     });
   }
+});
+
+domReady(() => {
+  // Display body when DOM is loaded
+  document.body.style.visibility = "visible";
 });
