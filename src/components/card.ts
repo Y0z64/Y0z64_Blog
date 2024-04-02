@@ -13,6 +13,7 @@ export function createCard(article: Card) {
   const card = document.createElement("div");
   const title = document.createElement("h3");
   const description = document.createElement("p");
+  const readMore = document.createElement("p");
   let tag;
   let image;
   let date;
@@ -25,18 +26,18 @@ export function createCard(article: Card) {
     card.style.paddingBottom = "26.5px";
   }
 
+  if (article.image) {
+    image = document.createElement("img");
+    image.src = article.image;
+    image.classList.add("image");
+    card.appendChild(image);
+  }
+
   if (article.date) {
     date = document.createElement("p");
     date.classList.add("date");
     date.classList.add("fira-code-regular");
     date.textContent = article.date;
-  }
-
-  // Add an image if it exists
-  if (article.image) {
-    image = document.createElement("img");
-    image.src = article.image;
-    card.appendChild(image);
   }
 
   // Add classes
@@ -47,10 +48,15 @@ export function createCard(article: Card) {
   title.classList.add("open-sans-bold");
   description.classList.add("roboto-regular");
   tag?.classList.add("fira-code-regular");
+  readMore.classList.add("read-more");
+ if (image && date) {
+   image.style.paddingTop = "46px";
+ }
 
   // Content
   title.textContent = article.title;
   description.textContent = article.description;
+  readMore.textContent = "Read more";
 
   // Connections
   if (date) text.appendChild(date);

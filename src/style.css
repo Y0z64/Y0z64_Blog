@@ -29,8 +29,8 @@
   background-image: url("white-noise.jpg");
   position: absolute;
   inset: -1000%;
-  opacity: 3.5%;
-  animation: fuzziness 1.6s linear infinite both;
+  opacity: 4%;
+  animation: fuzziness 1.2s linear infinite both;
   z-index: -1;
 }
 
@@ -197,7 +197,7 @@ header {
   min-height: 6.25rem;
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: start;
   padding: 10px 27.5px;
   display: flex;
   border-radius: 17.6px;
@@ -241,6 +241,21 @@ header {
   align-items: end;
   justify-content: end;
 }
+
+.image {
+  display: flex;
+  width: fit-content;
+  max-width: 200px;
+  height: fit-content;
+  max-height: 190px;
+  margin-right: 20px;
+  padding-top: 26px;
+}
+
+.read-more {
+
+}
+
 /* Fonts */
 .roboto-thin {
   font-family: "Roboto", sans-serif;
