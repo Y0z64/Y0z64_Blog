@@ -315,6 +315,13 @@ h2, .open-sans-regular {
     "wdth" 100;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  cursor: auto;
+}
+
 .open-sans-bold {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;

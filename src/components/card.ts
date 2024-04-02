@@ -1,6 +1,7 @@
 export type Card = {
   title: string;
   description: string;
+  path: string;
   tag?: string;
   image?: string;
   date?: string;
@@ -9,8 +10,8 @@ export type Card = {
 export function createCard(article: Card) {
   console.log("Creating a card");
   // Create elements
-  const wrapper = document.createElement("div");
-  const card = document.createElement("div");
+  const wrapper = document.createElement('div');
+  const card = document.createElement("a");
   const text = document.createElement("span");
   const title = document.createElement("h3");
   const description = document.createElement("p");
@@ -57,6 +58,7 @@ export function createCard(article: Card) {
  }
 
   // Content
+  card.href = article.path;
   title.textContent = article.title;
   description.textContent = article.description;
   readMore.textContent = "Read more";
@@ -65,9 +67,9 @@ export function createCard(article: Card) {
   if (date) text.appendChild(date);
   text.appendChild(title);
   text.appendChild(description);
-  card.appendChild(wrapper);
   wrapper.appendChild(text);
   wrapper.appendChild(readMore);
+  card.appendChild(wrapper);
 
 
   return card;
