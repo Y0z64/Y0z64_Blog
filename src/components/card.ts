@@ -9,8 +9,9 @@ export type Card = {
 export function createCard(article: Card) {
   console.log("Creating a card");
   // Create elements
-  const text = document.createElement("span");
+  const wrapper = document.createElement("div");
   const card = document.createElement("div");
+  const text = document.createElement("span");
   const title = document.createElement("h3");
   const description = document.createElement("p");
   const readMore = document.createElement("p");
@@ -41,6 +42,7 @@ export function createCard(article: Card) {
   }
 
   // Add classes
+  wrapper.classList.add("card-wrapper");
   card.classList.add("card");
   text.classList.add("hero-text");
   title.classList.add("title");
@@ -49,6 +51,7 @@ export function createCard(article: Card) {
   description.classList.add("roboto-regular");
   tag?.classList.add("fira-code-regular");
   readMore.classList.add("read-more");
+  readMore.classList.add("fira-code-thin");
  if (image && date) {
    image.style.paddingTop = "46px";
  }
@@ -62,7 +65,10 @@ export function createCard(article: Card) {
   if (date) text.appendChild(date);
   text.appendChild(title);
   text.appendChild(description);
-  card.appendChild(text);
+  card.appendChild(wrapper);
+  wrapper.appendChild(text);
+  wrapper.appendChild(readMore);
+
 
   return card;
 }

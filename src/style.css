@@ -190,6 +190,15 @@ header {
   margin-bottom: 1rem;
 }
 
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}
+
 .card {
   position: relative;
   box-sizing: border-box; /* Add this line */
@@ -253,7 +262,11 @@ header {
 }
 
 .read-more {
+  margin-bottom: 10px;
+}
 
+.read-more:hover {
+  text-decoration: underline;
 }
 
 /* Fonts */
@@ -318,6 +331,13 @@ h2, .open-sans-regular {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+}
+
+.fira-code-thin {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
 
 .fira-code-regular {
