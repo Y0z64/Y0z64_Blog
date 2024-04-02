@@ -2,7 +2,7 @@ import "./style.css";
 import gsap from "gsap";
 import createArticles from "./components/articles";
 
-let domReady = (cb) => {
+let domReady = (cb: () => void) => {
   document.readyState === "interactive" || document.readyState === "complete"
     ? cb()
     : document.addEventListener("DOMContentLoaded", cb);
