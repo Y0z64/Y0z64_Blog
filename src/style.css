@@ -219,11 +219,12 @@ header {
 }
 
 .tag {
+  font-size: 15px;
   position: absolute;
   left: 0;
   bottom: 0;
   width: fit-content;
-  min-height: 26.5px;
+  min-height: 25px;
   padding: 4px 8px;
   color: white;
   background: linear-gradient(to right, red, purple 70%);
@@ -231,6 +232,15 @@ header {
   border-radius: 0.4375rem 0.4375rem 0.4375rem 1.1rem;
 }
 
+.date {
+  display: flex;
+  color: gray;
+  font-size: 14px;
+  width: 100%;
+  margin: 0;
+  align-items: end;
+  justify-content: end;
+}
 /* Fonts */
 .roboto-thin {
   font-family: "Roboto", sans-serif;
